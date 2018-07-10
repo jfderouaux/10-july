@@ -1,7 +1,6 @@
 class Book < ApplicationRecord
   validates :title, presence: true
-  #validates :year_published, numericality: { only_integer: true }
-
+  validates :year_published, numericality: { only_integer: true }
   def old?
     return false unless year_published
     if
@@ -9,6 +8,7 @@ class Book < ApplicationRecord
       return true
     else
       return false
+      #comment test jfd
     end
   end
 end
